@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    width: 100%;
+    height: auto;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin: 4rem;
+    width: 30%;
+    max-width: 10rem;
+}
+
+/* HIDING INPUT ARROWS */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.app {
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 25rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.right {
+    padding: 2rem 0;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.res-wrap {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.lg-text {
+    color: white;
+    font-size: 1rem;
+}
+
+.sm-text {
+    color: hsl(184, 14%, 56%);
+    font-size: 1rem;
+}
+
+.tip-money-res {
+    color: hsl(172, 67%, 45%);
+    font-size: 2rem;
+}
+
+.total-money-res {
+    color: hsl(172, 67%, 45%);
+    font-size: 2rem;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.input-container-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.zero-bill {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1rem;
+    color: red;
+    font-weight: 400;
+}
+
+.zero-people {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1rem;
+    color: red;
+    font-weight: 400;
+}
+
+.show {
+    display: block;
+}
+
+.outline {
+    outline: 2px solid red !important;
+}
+
+/* INPUTS */
+
+.bill {
+    outline: none;
+    width: 100%;
+    padding-right: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(189, 41%, 97%);
+    background-image: url(./images/icon-dollar.svg);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 24px;
+    height: 3rem;
+    background-repeat: no-repeat; 
+    text-align: right;
+    background-position: 1rem center;
+    color: hsl(183, 100%, 15%);
+}
+
+.bill:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.people {
+    outline: none;
+    width: 100%;
+    padding-right: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(189, 41%, 97%);
+    background-image: url(./images/icon-person.svg);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 24px;
+    height: 3rem;
+    background-repeat: no-repeat; 
+    text-align: right;
+    background-position: 1rem center;
+    color: hsl(183, 100%, 15%);
+}
+
+.people:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+::placeholder {
+    color: hsl(184, 14%, 56%);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+.tip-btn {
+        width: 100%;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        background-color: hsl(183, 100%, 15%);
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        font-size: 24px;
+        height: 3rem;
+        text-align: center;
+        color: hsl(0, 0%, 100%);
+        transition: .2s;
+}
+
+.focus {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.tip-btn:hover {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 65%);
+}
+
+.tip-btn:active {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+
+
+.custom {
+    outline: none;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(189, 41%, 97%);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 24px;
+    height: 3rem;
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+}
+
+.custom:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.reset {
+    text-transform: uppercase;
+    color: hsl(183, 100%, 15%);
+    width: 90%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(172, 67%, 45%);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 24px;
+    height: 3rem;
+    text-align: center;
+    transition: .2s;
+}
+
+.reset:hover {
+    background-color: hsl(185, 41%, 65%);
+}
+
+.reset:active {
+    background-color: hsl(172, 67%, 45%);
+}
+
+@media only screen and (min-width:768px) {
+    .app {
+        max-width: 70rem;
+        flex-direction: row;
+    }
+
+    .left {
+        padding: 1rem;
+        width: 50%;
+    }
+
+    .right {
+        position: relative;
+        padding: 1rem;
+        width: 50%;
+        height: 25rem;
+        justify-content: flex-start;
+    }
+
+    .input-container {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .input-container:last-child {
+        margin-bottom: 0;
+    }
+
+    .input-container-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+
+    .res-wrap {
+        margin-top: 1rem;
+    }
+
+    .reset {
+        position: absolute;
+        bottom: 2rem;
+    }
+}
